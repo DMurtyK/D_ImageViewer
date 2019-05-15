@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import './Login.css';
 import Header from '../../common/header/Header.js';
 import Card from '@material-ui/core/Card';
@@ -10,6 +11,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 import Input from '@material-ui/core/Input';
 import Button from '@material-ui/core/Button';
 import FormHelperText from '@material-ui/core/FormHelperText';
+import Home from '../../screens/home/Home';
 
 class Login extends Component {
 
@@ -24,10 +26,21 @@ class Login extends Component {
     }
 
     loginClickHandler = () => {
+        let mockUsernameInstagram = "NaraDeepaInst";
+        let mockPasswordInstagram = "deepa84";
+        let accessToken = "13519702435.d6279dd.6835a58d23c74aa5b15bc5b1e554f3c3";
+
+        if (this.state.username  && this.state.password) {
+            if (this.state.username === mockUsernameInstagram && this.state.password === mockPasswordInstagram) {
+                ReactDOM.render(<Home />, document.getElementById('root'));
+            }
+        }
+
         this.state.username === "" ? this.setState({ usernameRequired: "dispBlock" }) :
             this.setState({ usernameRequired: "dispNone" });
         this.state.password === "" ? this.setState({ passwordRequired: "dispBlock" }) :
             this.setState({ passwordRequired: "dispNone" });
+        
     }
 
     inputUsernameChangeHandler = (e) => {
