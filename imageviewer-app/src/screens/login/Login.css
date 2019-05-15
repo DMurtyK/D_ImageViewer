@@ -8,3 +8,12 @@ margin-top: 2%;
  
     
 }
+.dispNone {
+    display: none;
+}
+.dispBlock {
+    display: block;
+}
+.red{
+    color: red;
+}
