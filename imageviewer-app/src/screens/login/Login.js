@@ -3,6 +3,7 @@ import './Login.css';
 import Header from '../../common/header/Header.js';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography';
 
 class Login extends Component {
 
@@ -15,7 +16,7 @@ class Login extends Component {
                 <Card >
                     <CardContent>
 
-                        <span>LOGIN</span>
+                        <Typography variant ="h6">LOGIN</Typography>
 
                     </CardContent>
 
